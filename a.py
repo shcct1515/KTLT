@@ -11,11 +11,12 @@ def createfile(direction, userinput):
     f.write(userinput)
     f.close()
 
+#hàm đếm số dòng có trong file
 def count(direction, n):
     f = open(direction, "r")
     line =0
     for j in enumerate(f):
-        line +=1
+        line +=1 
     return line
 
 #tạo hàm đọc file theo từng dòng
@@ -31,6 +32,6 @@ def readlinefile(direction, n):
     f.close()
     return data
 
-direction = r"D:\Library\open.txt"
+direction = r"test\open.txt" 
 n = int(input("nhap so dong ban muon doc: "))
 print(readlinefile(direction, n))
