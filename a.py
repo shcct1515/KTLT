@@ -1,9 +1,16 @@
 # viết hàm nhận vào tập tin txt trả về nội dung
 def readfile(direction):
     f = open(direction, "r")
-    data = f.readlines()
+    data = f.readline()
     f.close()
     return data
+
+# hàm viết lên file
+def writefile(direction, content):
+    f = open(direction, "w")
+    f.write(content)
+    f.close()
+
 
 # viết hàm tạo file lưu vào ổ D với nội dung "I'm expent python"
 def createfile(direction, userinput):
@@ -32,6 +39,6 @@ def readlinefile(direction, n):
     f.close()
     return data
 
-direction = r"test\open.txt" 
+""" direction = r"test\open.txt" 
 n = int(input("nhap so dong ban muon doc: "))
-print(readlinefile(direction, n))
+print(readlinefile(direction, n)) """
